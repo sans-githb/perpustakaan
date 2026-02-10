@@ -12,7 +12,8 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        //
+        $allKategori = Kategori::all();
+        return view('kategori.index', compact('allKategori'));
     }
 
     /**
@@ -20,7 +21,7 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        return view('kategori.create');
     }
 
     /**
@@ -28,7 +29,14 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validated([
+            'nama_kategori' => 'required|max:100', 
+        ]);
+
+        Kategori::create($validatedData);
+
+        return redirect()->route('kategori.index');
+
     }
 
     /**
@@ -37,6 +45,7 @@ class KategoriController extends Controller
     public function show(Kategori $kategori)
     {
         //
+        return view('kategori.show', compact('kategori'));
     }
 
     /**
@@ -45,6 +54,7 @@ class KategoriController extends Controller
     public function edit(Kategori $kategori)
     {
         //
+        return view('kategori.edit', compact('kategori'));
     }
 
     /**
@@ -53,6 +63,13 @@ class KategoriController extends Controller
     public function update(Request $request, Kategori $kategori)
     {
         //
+        $validatedData = $request->validated([
+            'nama_kategori' => 'required|max:100', 
+        ]);
+
+        $kategori->update($validatedData);
+
+        return redirect()->route('kategori.index');
     }
 
     /**
@@ -61,5 +78,7 @@ class KategoriController extends Controller
     public function destroy(Kategori $kategori)
     {
         //
+        $kategori->delete();
+        return redirect()->route('kategori.index');
     }
 }
