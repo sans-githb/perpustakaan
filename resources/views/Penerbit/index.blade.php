@@ -1,23 +1,23 @@
 @include('layout.header')
-        <h3>Kategori</h3>
-        <a href="{{ route('kategori.create') }}" class="tombol">Tambah</a>
+        <h3>Penerbit</h3>
+        <a href="{{ route('penerbit.create') }}" class="tombol">Tambah</a>
         <table>
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Nama Kategori</th>
+                    <th>Nama Penerbit</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($allKategori as $key => $r)
+                @foreach ($allPenerbit as $key => $r)
                     <tr>
                         <td>{{ $key + 1}}</td>
-                        <td>{{ $r->nama_kategori }}</td>
+                        <td>{{ $r->nama_penerbit }}</td>
                         <td>
-                            <form action="{{ route('kategori.destroy', $r->id)}}" method="POST">
-                                <a href="{{ route('kategori.show',$r->id)}}" class="tombol">detail</a>
-                                <a href="{{ route('kategori.edit',$r->id)}}" class="tombol">Edit</a>
+                            <form action="{{ route('penerbit.destroy', $r->id)}}" method="POST">
+                                <a href="{{ route('penerbit.show',$r->id)}}" class="tombol">detail</a>
+                                <a href="{{ route('penerbit.edit',$r->id)}}" class="tombol">Edit</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="tombol">Hapus</button>

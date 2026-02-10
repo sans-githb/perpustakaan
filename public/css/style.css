@@ -1,11 +1,11 @@
-/* Reset CSS */
+
 body, h1, p, table, th, td, input, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
-  /* Body Styling */
+
   body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
@@ -17,7 +17,7 @@ body, h1, p, table, th, td, input, button {
     margin: 0;
   }
 
-  /* Container Styling */
+
   .container {
     width: 90%;
     max-width: 1020px;
@@ -27,7 +27,7 @@ body, h1, p, table, th, td, input, button {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  /* Heading */
+ 
   .container h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -35,12 +35,12 @@ body, h1, p, table, th, td, input, button {
     color: #555;
   }
 
-  /* Navigation Styling */
+ 
 .nav {
     margin-bottom: 20px;
     border-top: 1px solid #ebebeb;
     border-bottom: 1px solid #ebebeb;
-    /* border-radius: 5px; */
+ 
     padding: 0px 10px;
 }
 
@@ -48,7 +48,7 @@ body, h1, p, table, th, td, input, button {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px; /* Spacing between menu items */
+    gap: 20px; 
 }
 
 .nav ul li {
@@ -66,18 +66,18 @@ body, h1, p, table, th, td, input, button {
 }
 
 .nav ul li a:hover {
-    background-color: #555; /* Darker blue for hover */
+    background-color: #555; 
     color: #fff;
 }
 
-/* Subheading Styling */
+
 h3 {
     margin-top: 20px;
     font-size: 20px;
     color: #555;
 }
 
-  /* Form Styling */
+  
   form {
     /* margin-bottom: 20px; */
   }
@@ -116,7 +116,7 @@ h3 {
     background-color: #555;
   }
 
-  /* Table Styling */
+
   table {
     width: 100%;
     border-collapse: collapse;
