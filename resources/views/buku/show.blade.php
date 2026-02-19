@@ -1,5 +1,12 @@
 @include('layout.header')
         <h3>Detail Buku</h3>
+
+        @if ($buku->cover)
+        <div style="text-align: center;">
+            <img src="{{ asset('storage/'. $buku->cover)}}" alt="cover buku" width="150">
+        </div>
+            
+        @endif
         <table>
 
             <tbody>

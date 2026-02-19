@@ -1,6 +1,6 @@
 @include('layout.header')
         <h3>Buat Buku</h3>
-        <form action="{{route('buku.store')}}" method="post">
+        <form action="{{route('buku.store')}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="">judul Buku:</label>
@@ -30,8 +30,11 @@
                         @endforeach
                 </select>
             </div>
-            
-            
+            <div class="form-group">
+                <label for="">Gambar Cover:</label>
+                <input type="file" name="file_cover" id="">
+            </div>
+
             <button type="submit" class="tombol">submit</button>
 
         </form>
